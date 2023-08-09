@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 
 export default function Textform(props) {
 
-
   const handleUpClick =() => {
     let newText= (text.toUpperCase());
     console.log("UpperCase was Clicked");
@@ -38,11 +37,7 @@ export default function Textform(props) {
 
         <div className="container">
           <h3>Your text Summary</h3>
-          <p>{text.split(" ").length} Words and {text.length} Characters</p>
-
-          <h3>Preview</h3>  
-          <p> {text} </p>
-
+          <p>{text.split(" ").length} Words and {text.length} Characters</p>    
         </div>
 </div>
 </>
