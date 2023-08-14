@@ -1,4 +1,3 @@
-/* Home.css */
 .home {
     font-family: 'Times New Roman', Times, serif;
   }
@@ -19,12 +18,9 @@
   .card{
     width: 18rem;
   }
-  /* .hero img{
-    width: 800px;
-    height: 300px;
-  } */
- 
-  .features {
+  
+
+ .features {
     display: flex;
     justify-content: space-around;
     max-width: 1200px;

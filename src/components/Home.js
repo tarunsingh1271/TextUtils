@@ -2,9 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Card from './Card';
 import image1 from './images/Text.png';
-import image2 from './images/simp.png';
-import image3 from './images/simp.png';
-import image4 from './images/simp.png';
 
 export default function Home(){
     const data = [
