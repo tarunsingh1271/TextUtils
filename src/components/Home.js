@@ -1,48 +1,53 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import Card from './Card';
+import image1 from './images/Text.png';
+import image2 from './images/simp.png';
+import image3 from './images/simp.png';
+import image4 from './images/simp.png';
 
 export default function Home(){
-  return (
+    const data = [
+        {
+            title: "What is TextUtils?",
+            des: " Apart from counting words and characters, our online editor can help you to improve word choice and writing style, and, optionally, help you to detect grammar mistakes and plagiarism.",
+            link:  "/About",
+            backgroundColor: "#e3f6f5",
+            image: "image2"
+        },
+        {
+            title: "Text Analysis",
+            des: " Make your text Uppercase or Lower case and many more in single click. Want to Start?",
+            link:  "/Textform",
+            backgroundColor: "#e3f6f5",
+            image: "image3"
 
+        },
+        {
+            title: "Want to Collaborate?",
+            des: " Contact Us using the link below.",
+            link:  "/About",
+            backgroundColor: "#e3f6f5",
+            image: "image4"
+        }
+      ]  
+      return (
     <div className="home">
         <section className="hero">
+        <img src={image1} alt='Text'/>
+        
         <h1>Transform Your Text</h1>
-        <p>Make your text editing tasks easier with our powerful text utilities.</p>        
+        <p>Make your text editing tasks easier with our powerful text utilities.</p>
         <Link className="nav-link active"  to="/Textform"> 
         <button type="button" className="btn btn-primary">Get Started</button></Link>
       </section>
 
-    <section className="features">
-      <div className="card">
-        <img src='public/Text.png' className="card-img-top" alt="Text.png"/>
-        <div className="card-body">
-        <h2>What is TextUtils?</h2>
-        <p className="card-text">Apart from counting words and characters, our online editor can help you to improve word choice and writing style, and, optionally, help you to detect grammar mistakes and plagiarism.</p>
-        <Link className="nav-link active"  to="/About"> 
-        <button type="button" className="btn btn-secondary">Learn More</button> </Link>
-        </div>
-        </div>
+    <section className="features"> 
 
-        <div className="card">
-        <img src="public/Text.png" className="card-img-top" alt="Text.png"/>
-        <div className="card-body">
-        <h2>Text Analysis</h2>
-        <p className="card-text">Make your text Uppercase or Lower case and many more in single click. Want to Start?</p>
-        <Link className="nav-link active"  to="/Textform"> 
-        <button type="button" className="btn btn-secondary">Click Here</button> </Link>
-        </div>
-        </div>
-
-        <div className="card">
-        <img src="public/Text.png" className="card-img-top" alt="Text.png"/>
-        <div className="card-body">
-        <h2>Want to Collaborate?</h2>
-        <p className="card-text">Contact Us using the link below.</p>
-        <Link className="nav-link active"  to="/About"> 
-        <button type="button" className="btn btn-secondary">Learn More</button> </Link>
-        </div>
-        </div>
+        {data.map((d,index)=>          
+             (<Card key={index} title= {d.title } des= {d.des} link= {d.link} backgroundColor= {d.backgroundColor} image={d.image}/>),
+            //  <img src={d.cardImage} class="card-img-top" alt="laptop"/>
+        )}
     </section>
     </div>
   );

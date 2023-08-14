@@ -4,18 +4,20 @@ import Textform from './components/Textform';
 import About from './components/About';
 import Home from './components/Home';
 
-import {BrowserRouter as Router,  Switch,  Route, Link} from "react-router-dom";
+import {BrowserRouter as Router,  Switch,  Route} from "react-router-dom";
 
 
 function App() {
   return (
   <>    
+  
+  
   <Router>
     <Navbar title="TextUtils"/>
-    <div className="container my-5 ">
+    <div className="container my-5">
     <Switch>
 
-            <Route path="/">
+            <Route exact path ="/">
               <Home/>
             </Route>
 
